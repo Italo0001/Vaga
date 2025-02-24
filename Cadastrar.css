@@ -1,0 +1,104 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(background.png);
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center center; /* Centraliza a imagem no meio da tela */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+body::before {
+    content: ''; /* Necessário para criar o pseudo-elemento */
+    position: absolute; /* Coloca o pseudo-elemento sobre o body */
+    top: 0; left: 0;
+    width: 100%; height: 100%; /* Tamanho da tela inteira */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura com transparência (ajuste o valor 0.5 para mais ou menos escuro) */
+    z-index: -1; /* Coloca o pseudo-elemento abaixo do conteúdo */
+}
+.Cadastro {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    width: 50%;
+    height:850px;
+    text-align: center;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+/* Estilo para os inputs dentro da área de Cadastro */
+.Cadastro input {
+    height: 40px;
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Linha de base no input */
+    font-size: 16px;
+    outline: none; /* Remove a borda de foco padrão do navegador */
+    position: relative;
+}
+
+/* Estilo para o placeholder */
+.Cadastro input::placeholder {
+    color: #aaa;
+    position: absolute;
+    left: 10px;
+    top: 50%; /* Inicialmente, o placeholder fica no centro */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    transition: all 0.3s ease;  /* Transição suave */
+    pointer-events: none; /* Impede que o texto do placeholder seja clicado */
+}
+
+/* Quando o input recebe o foco ou já está preenchido, o placeholder sobe */
+.Cadastro input:focus::placeholder,
+.Cadastro input:not(:placeholder-shown)::placeholder {
+    top: -10px; /* Move para cima */
+    font-size: 12px; /* Diminui o tamanho da fonte */
+    color: #333; /* Muda a cor do placeholder */
+}
+
+/* Adicionando mais espaço entre os inputs */
+.Cadastro input + input {
+    margin-top: 20px; /* Ajuste para o espaço entre os inputs */
+}
+
+/* Estilo para os labels para que fiquem acima do input */
+.Cadastro label {
+    position: absolute;
+    left: 10px;
+    top: 50%; /* Inicialmente, o label fica no centro do input */
+    transform: translateY(50%); /* Centraliza verticalmente */
+    color: #aaa;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Transição suave */
+    pointer-events: none; /* Impede que a label seja clicada */
+}
+
+/* Quando o input recebe o foco, a label sobe para ficar visível */
+.Cadastro input:focus + label,
+.Cadastro input:not(:placeholder-shown) + label {
+    top: -5px;
+    font-size: 15px;
+    color: #333;
+}
+.Cadastro button
+{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+    left: 35%;
+    background-color: yellow;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Arquivo CSS separado */
+

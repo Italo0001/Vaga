@@ -1,0 +1,86 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.login {
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    width: 300px;
+    height: 350px;
+    text-align: center;
+}
+/* Estilo para os inputs dentro da área de login */
+.login input {
+    height: 40px;
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Linha de base no input */
+    font-size: 16px;
+    outline: none; /* Remove a borda de foco padrão do navegador */
+    position: relative;
+}
+
+/* Estilo para o placeholder */
+.login input::placeholder {
+    color: #aaa;
+    position: absolute;
+    left: 10px;
+    top: 50%; /* Inicialmente, o placeholder fica no centro */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    transition: all 0.3s ease;  /* Transição suave */
+    pointer-events: none; /* Impede que o texto do placeholder seja clicado */
+}
+
+/* Quando o input recebe o foco ou já está preenchido, o placeholder sobe */
+.login input:focus::placeholder,
+.login input:not(:placeholder-shown)::placeholder {
+    top: -10px; /* Move para cima */
+    font-size: 12px; /* Diminui o tamanho da fonte */
+    color: #333; /* Muda a cor do placeholder */
+}
+
+/* Adicionando mais espaço entre os inputs */
+.login input + input {
+    margin-top: 20px; /* Ajuste para o espaço entre os inputs */
+}
+
+/* Estilo para os labels para que fiquem acima do input */
+.login label {
+    position: absolute;
+    left: 10px;
+    top: 50%; /* Inicialmente, o label fica no centro do input */
+    transform: translateY(50%); /* Centraliza verticalmente */
+    color: #aaa;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Transição suave */
+    pointer-events: none; /* Impede que a label seja clicada */
+}
+
+/* Quando o input recebe o foco, a label sobe para ficar visível */
+.login input:focus + label,
+.login input:not(:placeholder-shown) + label {
+    top: -5px;
+    font-size: 15px;
+    color: #333;
+}
+.login button
+{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 10vh;
+    left: 25%;
+    background-color: yellow;
+    border-radius: 6px;
+    cursor: pointer;
+}

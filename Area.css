@@ -1,0 +1,65 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(background.png);
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center center; /* Centraliza a imagem no meio da tela */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+body::before {
+    content: ''; /* Necessário para criar o pseudo-elemento */
+    position: absolute; /* Coloca o pseudo-elemento sobre o body */
+    top: 0; left: 0;
+    width: 100%; height: 100%; /* Tamanho da tela inteira */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura com transparência (ajuste o valor 0.5 para mais ou menos escuro) */
+    z-index: -1; /* Coloca o pseudo-elemento abaixo do conteúdo */
+}
+h1, h2
+{
+       text-align: justify;
+}
+.container
+{
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    max-width: 300px;
+    height: 350px;
+    text-align: center;
+}
+.container input
+{
+    height: 10%;
+    width: 100%;
+    margin-top: 15px;
+    border-top: white;
+    border-left: white;
+    border-right: white;
+}
+.container input:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none; /* Remove a borda de foco padrão do navegador */
+}
+.container a
+{
+    color: black;
+    width: 100%;
+    height: 20px;
+    position: relative;
+    top: 10vh;
+    background-color: yellow;
+    border-radius: 6px;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+ 
+}
