@@ -1,0 +1,168 @@
+/* Resetando margens e paddings para consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a cor de fundo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    color: #343a40; /* Cor do texto */
+    background-image: url(.../img/background.jpg);
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center center; /* Centraliza a imagem no meio da tela */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+body::before {
+    content: ''; /* Necessário para criar o pseudo-elemento */
+    position: absolute; /* Coloca o pseudo-elemento sobre o body */
+    top: 0; left: 0;
+    width: 100%; height: 100%; /* Tamanho da tela inteira */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura com transparência (ajuste o valor 0.5 para mais ou menos escuro) */
+    z-index: -1; /* Coloca o pseudo-elemento abaixo do conteúdo */
+}
+
+/* Contêiner geral */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho principal */
+h2 {
+    font-size: 24px;
+    color: #007bff; /* Azul */
+    margin-bottom: 20px;
+}
+
+/* Tabela */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    text-align: left;
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #495057;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilo de botões */
+button, .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    left: 0%;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-sm {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Formulários */
+form {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+form select {
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+    margin-right: 10px;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+form select:focus {
+    border-color: #80bdff;
+    outline: 0;
+}
+
+/* Mensagens de alerta */
+.alert {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.alert-error {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.alert-info {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* Estilo para os links do menu */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.row {
+    display: flex;
+    justify-content: space-between; /* Alinha a tabela à esquerda e o botão à direita */
+    align-items: flex-start;
+    width: 100%;
+}
+.col-auto {
+    margin-left: auto;
+}
