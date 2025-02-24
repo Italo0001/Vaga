@@ -65,7 +65,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="perfil_candidato.css">
+    <link rel="stylesheet" href="../public/perfil_candidato.css">
     <title>Editar Perfil - Candidato</title>
 </head>
 <body>

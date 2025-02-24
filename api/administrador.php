@@ -57,7 +57,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração - Usuários</title>
-    <link rel="stylesheet" href="administrador.css">
+    <link rel="stylesheet" href="../public/administrador.css">
 </head>
 <body>
 
